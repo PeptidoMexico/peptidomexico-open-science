@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use the reusable Péptido México Open Science packages, cite the package release you used."
 type: software
 title: "Péptido México Open Science packages"
-version: 0.3.0
+version: 0.4.0
 date-released: 2026-08-11
 authors:
   - name: "Péptido México"
@@ -16,6 +16,9 @@ keywords:
   - research software
   - reproducibility
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21895679"
+    description: "Archived v0.4.0 release"
   - type: doi
     value: "10.5281/zenodo.21895595"
     description: "Archived v0.3.0 release"
