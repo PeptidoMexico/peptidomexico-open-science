@@ -44,4 +44,5 @@ npm run pack:check
 ```
 
 Fixtures contain no customer data and no real literature claims. Cite the exact
-package release and the source records used in your own analysis.
+package release and the source records used in your own analysis. The latest
+suite release is archived on [Zenodo](https://doi.org/10.5281/zenodo.21895679).

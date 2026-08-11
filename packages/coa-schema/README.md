@@ -49,4 +49,5 @@ npm run pack:check
 
 ## Citation
 
-See `CITATION.cff` and cite the exact release when possible.
+See `CITATION.cff` and cite the exact release when possible. The latest suite
+release is archived on [Zenodo](https://doi.org/10.5281/zenodo.21895679).

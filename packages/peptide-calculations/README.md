@@ -42,6 +42,12 @@ All calculations use explicit units. A molecular mass is required for mM convers
 
 The CLI has no network access and produces deterministic output from the supplied inputs.
 
+## Live integration
+
+The browser integration is the [Péptido México reconstitution calculator](https://peptidomexico.com.mx/calculadora/),
+which passes explicit peptide mass and target concentration values to this
+calculation contract before displaying the resulting volume.
+
 ## Scope and disclosure
 
 This software is for research-use-only and educational laboratory calculations. It is maintained by Péptido México, a commercial supplier of research materials. The project is independent of any particular product catalog, batch, protocol or clinical use.
@@ -55,4 +61,4 @@ The test suite uses synthetic numeric fixtures. No customer data, certificates o
 
 ## Citation
 
-See CITATION.cff. Releases will receive a DOI after the public repository is connected to Zenodo.
+See `CITATION.cff` and the [archived v0.4.0 suite release on Zenodo](https://doi.org/10.5281/zenodo.21895679).

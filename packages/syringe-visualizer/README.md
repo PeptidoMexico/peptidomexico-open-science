@@ -24,6 +24,12 @@ The component receives a syringe capacity and a volume in millilitres. It render
 
 The component is intentionally a visual volume aid. It does not calibrate a physical device and does not decide which concentration, solvent or protocol a researcher should use.
 
+## Live integration
+
+The component is used by the [Péptido México reconstitution calculator](https://peptidomexico.com.mx/calculadora/)
+to make the calculated volume legible. The scene is an explanation of a numeric
+result, not a dosing or administration instruction.
+
 ## Scope and disclosure
 
 This software is for research-use-only and educational visualization. It is maintained by Péptido México, a commercial supplier of research materials. The project is independent of any product catalog, batch, protocol or clinical use.
@@ -35,4 +41,4 @@ This software is for research-use-only and educational visualization. It is main
 
 ## Citation
 
-See CITATION.cff. Releases will receive a DOI after the public repository is connected to Zenodo.
+See `CITATION.cff` and the [archived v0.4.0 suite release on Zenodo](https://doi.org/10.5281/zenodo.21895679).

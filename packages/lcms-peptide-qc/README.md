@@ -62,6 +62,9 @@ npm run pack:check
 Fixtures are synthetic and contain no customer data, private batch records or
 real analytical files.
 
+The latest suite release is archived on [Zenodo](https://doi.org/10.5281/zenodo.21895679)
+with reproducible citation metadata.
+
 ## Citation
 
 See `CITATION.cff` and cite the exact release when possible.
