@@ -11,4 +11,5 @@ nav:
   - Peptide calculations: peptide-calculations.md
   - Syringe visualizer: syringe-visualizer.md
   - Peptide QC: peptide-qc.md
+  - COA schema: coa-schema.md
   - Citation and scope: citation.md

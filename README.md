@@ -12,6 +12,8 @@ volume visualization.
   Three.js visualization of a volume inside a syringe, with an SVG fallback.
 - [`peptide-qc`](packages/peptide-qc/) — sequence composition, elemental formula,
   mass, approximate charge, pI and Kyte–Doolittle hydropathy output.
+- [`coa-schema`](packages/coa-schema/) — versioned JSON Schema and offline
+  validator for structured research-material records.
 
 The live integration demo is the [Péptido México reconstitution calculator](https://peptidomexico.com.mx/calculadora/).
 The demo connects a peptide presentation and a target concentration to the

@@ -1,0 +1,61 @@
+{
+  "name": "coa-schema",
+  "version": "0.1.0",
+  "description": "Versioned JSON Schema and offline validator for structured research-material COA records.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Péptido México",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeptidoMexico/peptidomexico-open-science.git",
+    "directory": "packages/coa-schema"
+  },
+  "homepage": "https://peptidomexico-open-science.readthedocs.io/en/latest/",
+  "bugs": {
+    "url": "https://github.com/PeptidoMexico/peptidomexico-open-science/issues"
+  },
+  "keywords": [
+    "coa",
+    "certificate-of-analysis",
+    "json-schema",
+    "research-material",
+    "laboratory",
+    "interoperability",
+    "research-use-only"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "schema",
+    "README.md",
+    "LICENSE",
+    "CITATION.cff",
+    "CHANGELOG.md",
+    "examples"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "coa-schema": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "pack:check": "npm run test && npm pack --dry-run"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}

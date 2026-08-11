@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "0.1.0",
+  "recordType": "research-material-coa",
+  "material": {
+    "name": "Synthetic peptide example",
+    "catalogId": "SYN-EXAMPLE-01",
+    "sequence": "ACDEFGHIK",
+    "nominalMassDa": 1018.43
+  },
+  "batch": {
+    "lotId": "SYN-2026-001",
+    "manufacturedDate": "2026-08-11",
+    "issuedDate": "2026-08-11"
+  },
+  "assays": [
+    {
+      "name": "Purity",
+      "result": 95.2,
+      "unit": "%",
+      "method": "Synthetic chromatographic example",
+      "status": "reported"
+    },
+    {
+      "name": "Identity",
+      "result": "example-consistent",
+      "unit": "qualitative",
+      "method": "Synthetic orthogonal identity example",
+      "status": "reported"
+    }
+  ],
+  "documents": [
+    {
+      "kind": "method-note",
+      "uri": "https://github.com/PeptidoMexico/peptidomexico-open-science",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "disclosure": {
+    "purpose": "Synthetic fixture for schema and validator tests.",
+    "limitations": "This record contains no real batch result and validation only checks structure.",
+    "source": "Peptido México Open Science synthetic fixture"
+  }
+}
