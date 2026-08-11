@@ -1,0 +1,12 @@
+site_name: Peptido México Open Science
+site_description: Reusable research-use-only peptide calculation and volume visualization tools.
+repo_name: PeptidoMexico/peptidomexico-open-science
+repo_url: https://github.com/PeptidoMexico/peptidomexico-open-science
+docs_dir: docs/open-source
+theme:
+  name: readthedocs
+nav:
+  - Home: index.md
+  - Peptide calculations: peptide-calculations.md
+  - Syringe visualizer: syringe-visualizer.md
+  - Citation and scope: citation.md
