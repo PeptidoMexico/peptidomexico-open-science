@@ -13,6 +13,7 @@ without access to the storefront or to customer data.
 | [`peptide-qc`](./peptide-qc/) | Sequence composition, formula, mass, approximate charge/pI and Kyte–Doolittle hydropathy with a JSON CLI. | `0.1.0` release candidate |
 | [`coa-schema`](./coa-schema/) | Versioned JSON Schema and offline validator for structured research-material records, with synthetic fixtures. | `0.1.0` release candidate |
 | [`lcms-peptide-qc`](./lcms-peptide-qc/) | Positive-mode m/z, charge-state and ppm-error calculations with a deterministic CSV parser. | `0.1.0` release candidate |
+| [`peptide-evidence-map`](./peptide-evidence-map/) | Identifier normalization, deduplication and provenance for curator-supplied literature evidence maps. | `0.1.0` release candidate |
 
 The web calculator at [`/calculadora/`](https://peptidomexico.com.mx/calculadora/)
 is an integration demo and the first owner page. It is not a substitute for a
@@ -21,9 +22,9 @@ decision.
 
 ## Future scope
 
-`peptide-evidence-map` and `repro-lab-kit` remain roadmap projects. They must not
-be listed as released tools until their input contracts, fixtures, tests,
-documentation and scientific limits exist in this repository.
+`peptide-evidence-map` is available as a release candidate. The repository-level
+`repro-lab-kit` is an offline workflow release candidate; it is not an npm package
+and does not claim to validate a laboratory method.
 
 ## Repository boundary
 

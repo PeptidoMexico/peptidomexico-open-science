@@ -83,3 +83,38 @@ jobs:
           cache-dependency-path: packages/lcms-peptide-qc/package-lock.json
       - run: npm ci
       - run: npm run pack:check
+
+  peptide-evidence-map:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/peptide-evidence-map
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: packages/peptide-evidence-map/package-lock.json
+      - run: npm ci
+      - run: npm run pack:check
+
+  repro-lab-kit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            packages/peptide-calculations/package-lock.json
+            packages/peptide-qc/package-lock.json
+            packages/lcms-peptide-qc/package-lock.json
+      - run: npm ci --prefix packages/peptide-calculations
+      - run: npm ci --prefix packages/peptide-qc
+      - run: npm ci --prefix packages/lcms-peptide-qc
+      - run: npm test --prefix packages/peptide-calculations
+      - run: npm test --prefix packages/peptide-qc
+      - run: npm test --prefix packages/lcms-peptide-qc
+      - run: node repro-lab-kit/workflow/run.mjs --check

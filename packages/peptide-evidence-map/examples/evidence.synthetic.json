@@ -1,0 +1,40 @@
+[
+  {
+    "id": "fixture-001",
+    "identifier": { "type": "local", "value": "SYNTHETIC-PEPTIDE-001" },
+    "title": "Synthetic in-vitro fixture; not a literature record",
+    "year": 2026,
+    "evidenceTier": "in-vitro",
+    "tags": ["synthetic", "fixture"],
+    "source": "peptido-mexico-example",
+    "synthetic": true
+  },
+  {
+    "id": "fixture-002",
+    "identifier": { "type": "local", "value": "SYNTHETIC-PEPTIDE-002" },
+    "title": "Synthetic review fixture; not a literature record",
+    "year": 2026,
+    "evidenceTier": "review",
+    "tags": ["fixture", "synthetic"],
+    "source": "peptido-mexico-example",
+    "synthetic": true
+  },
+  {
+    "id": "fixture-003",
+    "identifier": { "type": "doi", "value": "10.0000/example.duplicate" },
+    "title": "Synthetic duplicate fixture; not a literature record",
+    "evidenceTier": "unspecified",
+    "tags": ["duplicate", "synthetic"],
+    "source": "peptido-mexico-example",
+    "synthetic": true
+  },
+  {
+    "id": "fixture-004",
+    "identifier": "https://doi.org/10.0000/example.duplicate",
+    "title": "Second synthetic representation of the same identifier",
+    "evidenceTier": "unspecified",
+    "tags": ["duplicate", "synthetic"],
+    "source": "peptido-mexico-example",
+    "synthetic": true
+  }
+]

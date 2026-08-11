@@ -19,6 +19,12 @@ with DOI `10.5281/zenodo.21895595`.
   validator for structured research-material records.
 - [`lcms-peptide-qc`](packages/lcms-peptide-qc/) — positive-mode m/z, charge-state
   and ppm-error calculations for synthetic LC-MS workflow fixtures.
+- [`peptide-evidence-map`](packages/peptide-evidence-map/) — deterministic DOI,
+  PMID, PMCID and URL normalization, deduplication and curation provenance.
+
+The [`repro-lab-kit`](repro-lab-kit/) runs a synthetic sequence → reconstitution
+→ LC-MS calculation workflow offline and compares its JSON output with a
+versioned expected summary.
 
 The live integration demo is the [Péptido México reconstitution calculator](https://peptidomexico.com.mx/calculadora/).
 The demo connects a peptide presentation and a target concentration to the

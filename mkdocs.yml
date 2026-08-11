@@ -13,4 +13,6 @@ nav:
   - Peptide QC: peptide-qc.md
   - COA schema: coa-schema.md
   - LC-MS peptide QC: lcms-peptide-qc.md
+  - Peptide evidence map: peptide-evidence-map.md
+  - Repro Lab Kit: repro-lab-kit.md
   - Citation and scope: citation.md

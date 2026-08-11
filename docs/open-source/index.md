@@ -18,6 +18,13 @@ volume visualization.
   Schema and an offline CLI.
 - [`lcms-peptide-qc`](https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/packages/lcms-peptide-qc)
   calculates positive-mode m/z, charge states and signed/absolute ppm error.
+- [`peptide-evidence-map`](https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/packages/peptide-evidence-map)
+  normalizes and deduplicates curator-supplied literature identifiers with a
+  provenance hash; it does not fetch or interpret papers.
+
+The [`repro-lab-kit`](https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/repro-lab-kit)
+connects three package outputs in an offline synthetic workflow and checks a
+versioned expected summary.
 
 The browser integration is the [Péptido México reconstitution calculator](https://peptidomexico.com.mx/calculadora/).
 The calculated volume is shared with the visualizer, so the scene is an explanation

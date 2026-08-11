@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "0.1.0",
+  "sequence": "ACDE",
+  "peptide": {
+    "length": 4,
+    "formula": "C15H24N4O9S",
+    "monoisotopicDa": 436.12639954
+  },
+  "reconstitution": {
+    "targetMgPerMl": 5,
+    "volumeMl": 2
+  },
+  "lcms": {
+    "charge": 2,
+    "theoreticalMz": 219.07047624,
+    "observedMz": 219.07057624,
+    "absolutePpmError": 0.4565
+  },
+  "provenance": {
+    "inputSha256": "32bf8253b19feea9177c49189fad343bfb971e0febaf240f931790cbb6892f07",
+    "workflow": "repro-lab-kit@0.1.0",
+    "packages": ["peptide-calculations", "peptide-qc", "lcms-peptide-qc"]
+  }
+}
