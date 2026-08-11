@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use peptide-qc, please cite the release and the repository."
+type: software
+title: "peptide-qc"
+version: 0.1.0
+date-released: 2026-08-11
+authors:
+  - name: "Péptido México"
+    email: "hola@peptidomexico.com.mx"
+license: MIT
+repository-code: "https://github.com/PeptidoMexico/peptidomexico-open-science"
+url: "https://peptidomexico-open-science.readthedocs.io/en/latest/"
+keywords:
+  - peptide
+  - sequence analysis
+  - molecular mass
+  - isoelectric point
+  - hydropathy
+  - quality control
+  - research software

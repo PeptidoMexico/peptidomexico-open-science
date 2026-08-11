@@ -10,4 +10,5 @@ nav:
   - Home: index.md
   - Peptide calculations: peptide-calculations.md
   - Syringe visualizer: syringe-visualizer.md
+  - Peptide QC: peptide-qc.md
   - Citation and scope: citation.md

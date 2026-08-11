@@ -10,6 +10,9 @@ volume visualization.
   conversions from explicit inputs.
 - [`syringe-visualizer`](https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/packages/syringe-visualizer)
   renders a volume inside a syringe using Three.js and provides a 2D fallback.
+- [`peptide-qc`](https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/packages/peptide-qc)
+  reports sequence composition, elemental formula, mass, approximate charge/pI
+  and Kyte–Doolittle hydropathy.
 
 The browser integration is the [Péptido México reconstitution calculator](https://peptidomexico.com.mx/calculadora/).
 The calculated volume is shared with the visualizer, so the scene is an explanation

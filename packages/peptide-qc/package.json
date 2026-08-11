@@ -1,0 +1,57 @@
+{
+  "name": "peptide-qc",
+  "version": "0.1.0",
+  "description": "Inspectable sequence, mass, charge and hydropathy quality-control calculations for research peptides.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Péptido México",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeptidoMexico/peptidomexico-open-science.git",
+    "directory": "packages/peptide-qc"
+  },
+  "homepage": "https://peptidomexico-open-science.readthedocs.io/en/latest/",
+  "bugs": {
+    "url": "https://github.com/PeptidoMexico/peptidomexico-open-science/issues"
+  },
+  "keywords": [
+    "peptide",
+    "sequence",
+    "molecular-mass",
+    "isoelectric-point",
+    "hydropathy",
+    "quality-control",
+    "research-use-only"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CITATION.cff",
+    "CHANGELOG.md",
+    "examples"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "peptide-qc": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "pack:check": "npm run test && npm pack --dry-run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
