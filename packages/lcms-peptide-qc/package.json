@@ -1,0 +1,58 @@
+{
+  "name": "lcms-peptide-qc",
+  "version": "0.1.0",
+  "description": "Deterministic m/z, charge-state and ppm-error calculations for peptide LC-MS quality-control workflows.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Péptido México",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeptidoMexico/peptidomexico-open-science.git",
+    "directory": "packages/lcms-peptide-qc"
+  },
+  "homepage": "https://peptidomexico-open-science.readthedocs.io/en/latest/",
+  "bugs": {
+    "url": "https://github.com/PeptidoMexico/peptidomexico-open-science/issues"
+  },
+  "keywords": [
+    "lc-ms",
+    "lcms",
+    "mass-spectrometry",
+    "peptide",
+    "mz",
+    "ppm",
+    "quality-control",
+    "research-use-only"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CITATION.cff",
+    "CHANGELOG.md",
+    "examples"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "lcms-peptide-qc": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "pack:check": "npm run test && npm pack --dry-run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}

@@ -12,4 +12,5 @@ nav:
   - Syringe visualizer: syringe-visualizer.md
   - Peptide QC: peptide-qc.md
   - COA schema: coa-schema.md
+  - LC-MS peptide QC: lcms-peptide-qc.md
   - Citation and scope: citation.md

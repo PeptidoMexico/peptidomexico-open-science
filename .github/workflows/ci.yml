@@ -68,3 +68,18 @@ jobs:
           cache-dependency-path: packages/coa-schema/package-lock.json
       - run: npm ci
       - run: npm run pack:check
+
+  lcms-peptide-qc:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/lcms-peptide-qc
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: packages/lcms-peptide-qc/package-lock.json
+      - run: npm ci
+      - run: npm run pack:check

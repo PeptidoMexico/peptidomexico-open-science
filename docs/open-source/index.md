@@ -16,6 +16,8 @@ volume visualization.
 - [`coa-schema`](https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/packages/coa-schema)
   validates the structure of research-material records with a versioned JSON
   Schema and an offline CLI.
+- [`lcms-peptide-qc`](https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/packages/lcms-peptide-qc)
+  calculates positive-mode m/z, charge states and signed/absolute ppm error.
 
 The browser integration is the [Péptido México reconstitution calculator](https://peptidomexico.com.mx/calculadora/).
 The calculated volume is shared with the visualizer, so the scene is an explanation

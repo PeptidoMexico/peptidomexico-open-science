@@ -14,6 +14,8 @@ volume visualization.
   mass, approximate charge, pI and Kyte–Doolittle hydropathy output.
 - [`coa-schema`](packages/coa-schema/) — versioned JSON Schema and offline
   validator for structured research-material records.
+- [`lcms-peptide-qc`](packages/lcms-peptide-qc/) — positive-mode m/z, charge-state
+  and ppm-error calculations for synthetic LC-MS workflow fixtures.
 
 The live integration demo is the [Péptido México reconstitution calculator](https://peptidomexico.com.mx/calculadora/).
 The demo connects a peptide presentation and a target concentration to the
