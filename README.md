@@ -3,6 +3,9 @@
 Reusable, research-use-only software for peptide laboratory calculations and
 volume visualization.
 
+The stable `v0.3.0` release is archived on [Zenodo](https://doi.org/10.5281/zenodo.21895595)
+with DOI `10.5281/zenodo.21895595`.
+
 ## Packages
 
 - [`peptide-calculations`](packages/peptide-calculations/) — deterministic
