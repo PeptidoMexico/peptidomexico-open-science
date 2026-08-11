@@ -17,6 +17,9 @@ calculation engine, then renders the calculated volume in the visualizer. The
 visualizer is a geometry and reading aid; it does not decide a dose, protocol,
 solvent, route of administration or clinical action.
 
+Read the [versioned package documentation](https://peptidomexico-open-science.readthedocs.io/en/latest/)
+for the public API, reproducibility path and scientific boundaries.
+
 ## Quick start
 
 ```bash

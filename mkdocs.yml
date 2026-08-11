@@ -2,6 +2,7 @@ site_name: Peptido México Open Science
 site_description: Reusable research-use-only peptide calculation and volume visualization tools.
 repo_name: PeptidoMexico/peptidomexico-open-science
 repo_url: https://github.com/PeptidoMexico/peptidomexico-open-science
+edit_uri: edit/main/docs/open-source/
 docs_dir: docs/open-source
 theme:
   name: readthedocs
