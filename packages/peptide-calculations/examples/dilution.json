@@ -1,0 +1,14 @@
+{
+  "description": "Prepare five millilitres at two milligrams per millilitre from a ten milligrams per millilitre stock",
+  "input": {
+    "stockConcentration": 10,
+    "targetConcentration": 2,
+    "targetVolumeMl": 5,
+    "concentrationUnit": "mg/mL"
+  },
+  "expected": {
+    "stockVolumeMl": 1,
+    "diluentVolumeMl": 4,
+    "dilutionFactor": 5
+  }
+}

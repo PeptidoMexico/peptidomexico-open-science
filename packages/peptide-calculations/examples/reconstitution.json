@@ -1,0 +1,12 @@
+{
+  "description": "Ten milligrams at a target concentration of five milligrams per millilitre",
+  "input": {
+    "mass": 10,
+    "massUnit": "mg",
+    "target": 5,
+    "concentrationUnit": "mg/mL"
+  },
+  "expected": {
+    "volumeMl": 2
+  }
+}

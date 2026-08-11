@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use peptide-calculations, please cite the release and the repository."
+type: software
+title: "peptide-calculations"
+version: 0.1.0
+date-released: 2026-08-11
+authors:
+  - name: "Péptido México"
+license: MIT
+repository-code: "https://github.com/PeptidoMexico/peptidomexico-open-science"
+url: "https://peptidomexico.com.mx/calculadora/"
+keywords:
+  - peptide
+  - reconstitution
+  - concentration
+  - dilution
+  - laboratory
+  - research software

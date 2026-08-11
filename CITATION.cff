@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use the reusable Péptido México Open Science packages, cite the package release you used."
+type: software
+title: "Péptido México Open Science packages"
+version: 0.1.0
+date-released: 2026-08-11
+authors:
+  - name: "Péptido México"
+license: MIT
+repository-code: "https://github.com/PeptidoMexico/peptidomexico-open-science"
+url: "https://peptidomexico.com.mx/calculadora/"
+keywords:
+  - peptide
+  - laboratory
+  - open science
+  - research software
+  - reproducibility

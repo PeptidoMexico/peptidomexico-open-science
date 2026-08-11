@@ -1,0 +1,68 @@
+{
+  "name": "syringe-visualizer",
+  "version": "0.1.0",
+  "description": "Accessible Three.js syringe volume visualization for laboratory education and research tools.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Péptido México",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeptidoMexico/peptidomexico-open-science.git",
+    "directory": "packages/syringe-visualizer"
+  },
+  "homepage": "https://peptidomexico.com.mx/calculadora/#syringe-visualizer",
+  "bugs": {
+    "url": "https://github.com/PeptidoMexico/peptidomexico-open-science/issues"
+  },
+  "keywords": [
+    "syringe",
+    "threejs",
+    "react-three-fiber",
+    "laboratory",
+    "volume",
+    "visualization",
+    "accessibility"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@react-three/drei": ">=10",
+    "@react-three/fiber": ">=9",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "three": ">=0.185"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CITATION.cff",
+    "CHANGELOG.md"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "pack:check": "npm run test && npm pack --dry-run"
+  },
+  "devDependencies": {
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.185.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.185.1",
+    "typescript": "^5.7.0"
+  }
+}
