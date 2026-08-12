@@ -16,6 +16,17 @@ npm ci --prefix packages/lcms-peptide-qc
 npm run repro:lab-kit
 ```
 
+## Container image
+
+The public image is available from GitHub Container Registry:
+
+```bash
+docker run --rm \
+  --volume "$PWD/workflows/cwl/examples:/inputs:ro" \
+  ghcr.io/peptidomexico/repro-lab-kit:0.1.0 \
+  --input /inputs/input.json
+```
+
 The kit also includes a Dockerfile, a synthetic fixture, a provenance contract
 an SBOM, a CWL wrapper and a citation file. It proves software reproducibility only; it is not a
 validated analytical method, identity confirmation, purity certificate or

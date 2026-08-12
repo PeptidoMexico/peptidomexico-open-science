@@ -29,6 +29,15 @@ docker build -f repro-lab-kit/Dockerfile -t peptido-repro-lab-kit .
 docker run --rm peptido-repro-lab-kit
 ```
 
+The same image is published anonymously through GitHub Container Registry:
+
+```bash
+docker run --rm \
+  --volume "$PWD/workflows/cwl/examples:/inputs:ro" \
+  ghcr.io/peptidomexico/repro-lab-kit:0.1.0 \
+  --input /inputs/input.json
+```
+
 The exact fixture and the expected summary are versioned beside the runner.
 The runner intentionally omits timestamps and machine-specific paths so the
 same input can be compared across environments.
