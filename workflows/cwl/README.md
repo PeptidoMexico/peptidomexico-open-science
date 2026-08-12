@@ -22,3 +22,10 @@ The Docker image is pinned to `ghcr.io/peptidomexico/repro-lab-kit:0.1.0`.
 Update the image tag and workflow metadata together when releasing a new
 version. The workflow does not provide dosing, administration, clinical
 interpretation or product-performance claims.
+
+## Workflow registry metadata
+
+The repository root contains a `.dockstore.yml` descriptor so workflow
+registries can discover this CWL example from the source repository. The
+descriptor names the primary workflow, its synthetic test fixture, and the
+versioned container image; it does not embed credentials or private data.
