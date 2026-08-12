@@ -1,0 +1,13 @@
+{
+  "sequence": "ACDE",
+  "reconstitution": {
+    "mass": 10,
+    "massUnit": "mg",
+    "target": 5,
+    "concentrationUnit": "mg/mL"
+  },
+  "lcms": {
+    "charge": 2,
+    "observedOffsetDa": 0.0001
+  }
+}

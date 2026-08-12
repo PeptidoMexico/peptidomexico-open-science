@@ -1,0 +1,20 @@
+version: 1.2
+workflows:
+  - name: repro-lab-kit-cwl
+    subclass: CWL
+    primaryDescriptorPath: /workflows/cwl/repro-lab-kit-workflow.cwl
+    otherFiles:
+      - /workflows/cwl/repro-lab-kit.cwl
+      - /workflows/cwl/examples/input.json
+      - /workflows/cwl/README.md
+      - /repro-lab-kit/README.md
+    testParameterFiles:
+      - /workflows/cwl/examples/input.json
+    readMePath: /workflows/cwl/README.md
+    authors:
+      - name: Peptido México Open Science
+        email: hola@peptidomexico.com.mx
+        affiliation: Peptido México
+    topic: Reproducible peptide calculation workflow using CWL and synthetic fixtures.
+    latestTagAsDefault: true
+    enableAutoDois: true
