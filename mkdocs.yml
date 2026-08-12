@@ -15,4 +15,7 @@ nav:
   - LC-MS peptide QC: lcms-peptide-qc.md
   - Peptide evidence map: peptide-evidence-map.md
   - Repro Lab Kit: repro-lab-kit.md
+  - CWL workflow: cwl-workflow.md
+  - Python calculations: peptide-calculations-python.md
+  - Synthetic benchmark: synthetic-benchmark.md
   - Citation and scope: citation.md

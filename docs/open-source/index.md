@@ -21,10 +21,17 @@ volume visualization.
 - [`peptide-evidence-map`](https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/packages/peptide-evidence-map)
   normalizes and deduplicates curator-supplied literature identifiers with a
   provenance hash; it does not fetch or interpret papers.
+- [`peptide-calculations` for Python](https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/packages/peptide-calculations-python)
+  provides a dependency-free Python API and CLI for the same unit-aware
+  calculations.
 
 The [`repro-lab-kit`](https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/repro-lab-kit)
 connects three package outputs in an offline synthetic workflow and checks a
 versioned expected summary.
+
+The [CWL workflow](cwl-workflow.md) wraps the same run in a portable workflow
+description, and the OCI image includes a CycloneDX SBOM for the three package
+dependencies.
 
 The browser integration is the [Péptido México reconstitution calculator](https://peptidomexico.com.mx/calculadora/).
 The calculated volume is shared with the visualizer, so the scene is an explanation

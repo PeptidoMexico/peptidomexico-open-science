@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "0.1.0",
+  "dataset": "synthetic-peptide-reconstitution-v0.1.0",
+  "generator": "hand-authored deterministic fixtures",
+  "sourceCode": "packages/peptide-calculations",
+  "dataLicense": "CC-BY-4.0",
+  "rowCount": 12,
+  "inputSha256": "9c296caabab143fa89574dc324eb14583b5e0e691cff94bfd6264b9af75f3bf8"
+}

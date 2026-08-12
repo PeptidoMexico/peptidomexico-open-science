@@ -118,3 +118,30 @@ jobs:
       - run: npm test --prefix packages/peptide-qc
       - run: npm test --prefix packages/lcms-peptide-qc
       - run: node repro-lab-kit/workflow/run.mjs --check
+
+  python-package:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/peptide-calculations-python
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: python -m unittest discover -s tests -v
+      - run: python -m pip install --upgrade build
+      - run: python -m build
+
+  synthetic-benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: packages/peptide-calculations/package-lock.json
+      - run: npm ci --prefix packages/peptide-calculations
+      - run: npm run build --prefix packages/peptide-calculations
+      - run: node scripts/validate-synthetic-benchmark.mjs

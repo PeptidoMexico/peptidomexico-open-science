@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, cite the dataset and the software release."
+type: dataset
+title: "Synthetic peptide reconstitution benchmark"
+version: 0.1.0
+date-released: 2026-08-11
+authors:
+  - name: "Péptido México"
+    email: "hola@peptidomexico.com.mx"
+license: CC-BY-4.0
+repository-code: "https://github.com/PeptidoMexico/peptidomexico-open-science"
+url: "https://peptidomexico-open-science.readthedocs.io/en/latest/"
+keywords:
+  - benchmark
+  - peptide
+  - reconstitution
+  - reproducibility
+  - synthetic data

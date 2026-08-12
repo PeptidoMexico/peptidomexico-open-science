@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Synthetic peptide reconstitution benchmark row",
+  "type": "object",
+  "required": [
+    "case_id",
+    "mass",
+    "mass_unit",
+    "target",
+    "target_unit",
+    "expected_volume_ml"
+  ],
+  "properties": {
+    "case_id": { "type": "string", "pattern": "^recon-[0-9]{3}$" },
+    "mass": { "type": "number", "exclusiveMinimum": 0 },
+    "mass_unit": { "enum": ["mg", "µg"] },
+    "target": { "type": "number", "exclusiveMinimum": 0 },
+    "target_unit": { "enum": ["mg/mL", "µg/mL", "µg/µL", "mM"] },
+    "molar_mass_da": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+    "expected_volume_ml": { "type": "number", "exclusiveMinimum": 0 }
+  },
+  "additionalProperties": false
+}

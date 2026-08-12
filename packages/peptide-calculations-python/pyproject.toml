@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peptide-calculations"
+version = "0.1.0"
+description = "Unit-safe peptide reconstitution, concentration, dilution and molarity calculations."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Péptido México", email = "hola@peptidomexico.com.mx" },
+]
+keywords = ["peptide", "reconstitution", "concentration", "dilution", "molarity", "laboratory"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://peptidomexico.com.mx/calculadora/"
+Documentation = "https://peptidomexico-open-science.readthedocs.io/en/latest/"
+Repository = "https://github.com/PeptidoMexico/peptidomexico-open-science"
+Issues = "https://github.com/PeptidoMexico/peptidomexico-open-science/issues"
+
+[project.scripts]
+peptide-calculations = "peptide_calculations.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,13 @@
+case_id,mass,mass_unit,target,target_unit,molar_mass_da,expected_volume_ml
+recon-001,10,mg,5,mg/mL,,2
+recon-002,5,mg,2.5,mg/mL,,2
+recon-003,500,µg,2,µg/µL,,0.25
+recon-004,1,mg,100,µg/mL,,10
+recon-005,20,mg,8,mg/mL,,2.5
+recon-006,2500,µg,5,µg/µL,,0.5
+recon-007,8,mg,1,mM,4000,2
+recon-008,12,mg,2,mM,3000,2
+recon-009,0.75,mg,0.5,mg/mL,,1.5
+recon-010,1250,µg,250,µg/mL,,5
+recon-011,3,mg,1500,µg/mL,,2
+recon-012,6,mg,0.75,mM,8000,1

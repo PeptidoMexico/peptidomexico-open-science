@@ -1,0 +1,34 @@
+{
+  "title": "Synthetic peptide reconstitution calculation benchmark v0.1.0",
+  "description": "Twelve deterministic, synthetic cases for testing unit-safe peptide reconstitution calculations. The cases cover mg and microgram inputs, mL and microlitre volumes, mass concentrations and mM inputs with an explicit molecular mass. This dataset contains no customer, clinical, batch, instrument or experimental data. The validator, schema, dataset card and provenance hash are included in the source repository.",
+  "keywords": [
+    "peptide",
+    "reconstitution",
+    "concentration",
+    "laboratory calculations",
+    "reproducible research",
+    "synthetic benchmark"
+  ],
+  "license": {
+    "name": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "related_materials": [
+    {
+      "identifier": "https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/benchmarks/peptide-calculations-synthetic",
+      "relation": "isSupplementTo"
+    },
+    {
+      "identifier": "https://peptidomexico.com.mx/calculadora/",
+      "relation": "isReferencedBy"
+    }
+  ],
+  "files": [
+    "input.csv",
+    "schema.json",
+    "DATASET_CARD.md",
+    "PROVENANCE.json",
+    "CITATION.cff",
+    "README.md"
+  ]
+}
