@@ -32,7 +32,8 @@
     "LICENSE",
     "CITATION.cff",
     "CHANGELOG.md",
-    "examples"
+    "examples",
+    "fixtures"
   ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

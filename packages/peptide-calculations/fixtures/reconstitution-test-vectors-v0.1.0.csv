@@ -1,0 +1,6 @@
+case_id,mass_value,mass_unit,target_concentration_value,target_concentration_unit,expected_volume_value,expected_volume_unit,normalized_mass_mg,normalized_concentration_mg_per_ml,formula,notes
+r01,10,mg,5,mg/mL,2,mL,10,5,mass / target_concentration,baseline mg and mg/mL case
+r02,500,ug,2,ug/uL,250,uL,0.5,2,mass / target_concentration,unit-equivalent microgram and microlitre case
+r03,2,mg,2,ug/uL,1000,uL,2,2,mass / target_concentration,mixed mass and concentration scales after normalization
+r04,0.75,mg,1.5,mg/mL,0.5,mL,0.75,1.5,mass / target_concentration,decimal concentration case
+r05,1250,ug,2.5,ug/uL,500,uL,1.25,2.5,mass / target_concentration,larger microgram input with exact result
