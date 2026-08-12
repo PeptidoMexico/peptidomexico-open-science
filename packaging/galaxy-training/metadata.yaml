@@ -1,0 +1,15 @@
+type: "use"
+title: "Transparent peptide reconstitution calculations in Galaxy"
+description: "A short, synthetic-data tutorial for running a unit-safe reconstitution calculation and inspecting the JSON result."
+contributors:
+  - "Péptido México"
+maintainers:
+  - "Péptido México"
+edam_topics:
+  - "topic_3345"
+  - "topic_0091"
+tags:
+  - "peptide"
+  - "reproducibility"
+  - "unit conversion"
+  - "synthetic data"
