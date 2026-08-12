@@ -17,4 +17,5 @@ workflows:
         affiliation: Peptido México
     topic: Reproducible peptide calculation workflow using CWL and synthetic fixtures.
     latestTagAsDefault: true
+    publish: true
     enableAutoDois: true
