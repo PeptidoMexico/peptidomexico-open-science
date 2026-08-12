@@ -1,0 +1,25 @@
+{
+  "status": "uploaded-in-preparation",
+  "openml_dataset_id": 47274,
+  "openml_url": "https://www.openml.org/d/47274",
+  "name": "synthetic-peptide-reconstitution-benchmark-v0-1-0",
+  "description": "Twelve deterministic synthetic cases for testing unit-safe peptide reconstitution calculations. The default target is expected_volume_ml; the cases cover mass concentration, molar concentration, mixed mass units and explicit molecular masses. The data are generated examples, not customer, clinical, batch or instrument data. Unit spellings use ASCII-safe OpenML nominal values: ug maps to µg and ug/uL maps to µg/µL.",
+  "data_format": "arff",
+  "licence": "CC BY 4.0",
+  "language": "English",
+  "creator": "Peptido Mexico Open Science",
+  "contributor": "Peptido Mexico Open Science",
+  "collection_date": "2026-08-12",
+  "version_label": "0.1.0",
+  "default_target_attribute": "expected_volume_ml",
+  "row_id_attribute": "case_id",
+  "ignore_attribute": "case_id",
+  "original_data_url": "https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/benchmarks/peptide-calculations-synthetic",
+  "citation": "Peptido Mexico Open Science (2026), Synthetic peptide reconstitution calculation benchmark v0.1.0, DOI: 10.6084/m9.figshare.33213873.v1",
+  "source_files": [
+    "reconstitution-benchmark.arff",
+    "README.md",
+    "VALIDATION.md",
+    "dataset-metadata.json"
+  ]
+}

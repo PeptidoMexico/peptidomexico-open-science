@@ -1,0 +1,23 @@
+@relation synthetic_peptide_reconstitution_benchmark_v0_1_0
+
+@attribute case_id string
+@attribute mass numeric
+@attribute mass_unit {mg,ug}
+@attribute target numeric
+@attribute target_unit {mg/mL,ug/mL,ug/uL,mM}
+@attribute molar_mass_da numeric
+@attribute expected_volume_ml numeric
+
+@data
+'recon-001',10,mg,5,mg/mL,?,2
+'recon-002',5,mg,2.5,mg/mL,?,2
+'recon-003',500,ug,2,ug/uL,?,0.25
+'recon-004',1,mg,100,ug/mL,?,10
+'recon-005',20,mg,8,mg/mL,?,2.5
+'recon-006',2500,ug,5,ug/uL,?,0.5
+'recon-007',8,mg,1,mM,4000,2
+'recon-008',12,mg,2,mM,3000,2
+'recon-009',0.75,mg,0.5,mg/mL,?,1.5
+'recon-010',1250,ug,250,ug/mL,?,5
+'recon-011',3,mg,1500,ug/mL,?,2
+'recon-012',6,mg,0.75,mM,8000,1
