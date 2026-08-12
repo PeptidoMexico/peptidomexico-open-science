@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Unit-aware peptide reconstitution volume demo for research and education." />
+    <title>Peptide reconstitution volume demo</title>
+    <style>
+      :root { color-scheme: light; font: 16px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; color: #162033; background: #edf1f6; }
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 24px; }
+      main { display: grid; grid-template-columns: minmax(240px, .8fr) minmax(320px, 1.2fr); gap: 18px; max-width: 980px; margin: auto; }
+      .card { padding: 20px; border: 1px solid #d4dce8; border-radius: 16px; background: #fff; box-shadow: 0 18px 44px #16203312; }
+      h1 { margin: 0 0 12px; font-size: clamp(1.7rem, 4vw, 2.7rem); line-height: 1.05; letter-spacing: -.05em; }
+      p { color: #5c687b; }
+      .fields { display: grid; gap: 12px; margin: 20px 0; }
+      label { display: grid; gap: 5px; font-size: .82rem; font-weight: 700; }
+      input, select { width: 100%; padding: 11px; border: 1px solid #b9c3d1; border-radius: 9px; font: inherit; color: inherit; background: #fff; }
+      .result { padding: 14px 16px; border-left: 4px solid #183fd2; border-radius: 8px; background: #f0f3ff; }
+      .result strong { display: block; color: #183fd2; font: 800 1.5rem/1.1 ui-monospace, monospace; }
+      .result small { display: block; margin-top: 6px; color: #58657a; }
+      #scene { min-height: 520px; overflow: hidden; border-radius: 12px; background: linear-gradient(150deg, #fbfdff, #dbe3ef); }
+      .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; font-size: .88rem; }
+      a { color: #183fd2; font-weight: 700; }
+      .notice { padding-top: 12px; border-top: 1px solid #e0e5ed; font-size: .76rem; }
+      @media (max-width: 720px) { body { padding: 12px; } main { grid-template-columns: 1fr; } #scene { min-height: 390px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <h1>Peptide reconstitution volume</h1>
+        <p>Change the mass and target concentration. The syringe explains the calculated volume; it does not select a solvent or a laboratory method.</p>
+        <div class="fields">
+          <label>Mass (mg)<input id="mass" type="number" min="0" step="0.1" value="10" /></label>
+          <label>Target concentration (mg/mL)<input id="target" type="number" min="0.001" step="0.1" value="5" /></label>
+          <label>Reference syringe (mL)<select id="capacity"><option>1</option><option selected>3</option><option>5</option><option>10</option></select></label>
+        </div>
+        <div class="result" aria-live="polite">
+          <strong id="answer">2.000 mL</strong>
+          <small id="formula">10 mg ÷ 5 mg/mL = 2 mL</small>
+        </div>
+        <div class="links">
+          <a href="https://peptidomexico.com.mx/calculadora/" target="_blank" rel="noopener">Open the guided calculator</a>
+          <a href="https://github.com/PeptidoMexico/peptidomexico-open-science" target="_blank" rel="noopener">Read the source</a>
+        </div>
+        <p class="notice">Research-use-only educational software. Verify units and method-specific requirements independently. No dose or administration guidance.</p>
+      </section>
+      <section class="card" aria-label="Reference syringe visualization"><div id="scene"></div></section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
