@@ -29,3 +29,9 @@ The repository root contains a `.dockstore.yml` descriptor so workflow
 registries can discover this CWL example from the source repository. The
 descriptor names the primary workflow, its synthetic test fixture, and the
 versioned container image; it does not embed credentials or private data.
+
+## Maintainer project
+
+Peptido México maintains the companion calculator and user documentation at
+<https://peptidomexico.com.mx/calculadora/>. The workflow remains independent
+of the website and can be validated or run directly from this repository.
