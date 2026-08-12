@@ -21,6 +21,9 @@ with DOI `10.5281/zenodo.21895679`.
   and ppm-error calculations for synthetic LC-MS workflow fixtures.
 - [`peptide-evidence-map`](packages/peptide-evidence-map/) — deterministic DOI,
   PMID, PMCID and URL normalization, deduplication and curation provenance.
+- [`peptideCalculations`](packages/peptideCalculations/) — dependency-light R
+  functions for reconstitution volume, concentration, dilution planning and
+  molarity, with explicit units and test coverage.
 
 The [`repro-lab-kit`](repro-lab-kit/) runs a synthetic sequence → reconstitution
 → LC-MS calculation workflow offline and compares its JSON output with a
@@ -56,6 +59,16 @@ npm test
 ```
 
 See each package README for its API, limits and citation instructions.
+
+R users can install the package from the project’s R-universe once its build is
+green:
+
+```r
+install.packages(
+  "peptideCalculations",
+  repos = c("https://peptidomexico.r-universe.dev", "https://cloud.r-project.org")
+)
+```
 
 ## Scope and disclosure
 

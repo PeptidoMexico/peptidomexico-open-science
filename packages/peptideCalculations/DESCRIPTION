@@ -1,0 +1,20 @@
+Package: peptideCalculations
+Type: Package
+Title: Unit-Safe Peptide Solution Calculations
+Version: 0.1.0
+Authors@R: person("Peptido Mexico Open Science", email = "hola@peptidomexico.com.mx", role = c("aut", "cre"))
+Author: Peptido Mexico Open Science [aut, cre]
+Maintainer: Peptido Mexico Open Science <hola@peptidomexico.com.mx>
+Description: Transparent, unit-safe calculations for preparing peptide solutions.
+    Functions cover reconstitution volume, concentration, dilution planning,
+    and molarity. The package is research-use-only software and does not
+    provide dosing, administration, or clinical interpretation.
+License: MIT + file LICENSE
+URL: https://github.com/PeptidoMexico/peptidomexico-open-science,
+    https://peptidomexico.com.mx/calculadora/
+BugReports: https://github.com/PeptidoMexico/peptidomexico-open-science/issues
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
