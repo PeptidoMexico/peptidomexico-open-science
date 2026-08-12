@@ -1,10 +1,16 @@
-# Péptido México Open Science
+# PeptidoMexico Open Science
 
 Reusable, research-use-only software for peptide laboratory calculations and
 volume visualization.
 
-The stable `v0.4.0` release is archived on [Zenodo](https://doi.org/10.5281/zenodo.21895679)
-with DOI `10.5281/zenodo.21895679`.
+This is the open-source program of [Peptido México](https://peptidomexico.com.mx/).
+`PeptidoMexico` is the project’s canonical brand; **Open Science** describes the
+reusable software and reproducibility program. The project is maintained under
+the PeptidoMexico GitHub organization and is separate from the commercial
+storefront’s catalog, checkout and customer data.
+
+The current `v0.5.3` release is the maintained package baseline. Archived
+release DOIs are listed in [`CITATION.cff`](CITATION.cff).
 
 ## Packages
 
@@ -29,7 +35,7 @@ The [`repro-lab-kit`](repro-lab-kit/) runs a synthetic sequence → reconstituti
 → LC-MS calculation workflow offline and compares its JSON output with a
 versioned expected summary.
 
-The live integration demo is the [Péptido México reconstitution calculator](https://peptidomexico.com.mx/calculadora/).
+The live integration demo is the [Peptido México reconstitution calculator](https://peptidomexico.com.mx/calculadora/).
 The demo connects a peptide presentation and a target concentration to the
 calculation engine, then renders the calculated volume in the visualizer. The
 visualizer is a geometry and reading aid; it does not decide a dose, protocol,
@@ -66,7 +72,7 @@ green:
 ```r
 install.packages(
   "peptideCalculations",
-  repos = c("https://peptidomexico.r-universe.dev", "https://cloud.r-project.org")
+  repos = c("https://peptidomexico-openscience.r-universe.dev", "https://cloud.r-project.org")
 )
 ```
 
