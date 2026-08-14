@@ -1,0 +1,48 @@
+{
+  "@context": "https://w3id.org/codemeta/3.1",
+  "@type": "SoftwareSourceCode",
+  "name": "Péptido México Open Science",
+  "alternateName": [
+    "Peptido Mexico Open Science"
+  ],
+  "description": "Open-source, research-use-only software for peptide calculation, sequence quality checks, structured research-material records, LC-MS fixtures and reproducible laboratory workflows.",
+  "applicationCategory": "Scientific software",
+  "codeRepository": "https://github.com/PeptidoMexico/peptidomexico-open-science",
+  "issueTracker": "https://github.com/PeptidoMexico/peptidomexico-open-science/issues",
+  "readme": "https://github.com/PeptidoMexico/peptidomexico-open-science/blob/main/README.md",
+  "softwareHelp": "https://peptidomexico-open-science.readthedocs.io/en/latest/",
+  "url": "https://peptidomexico.com.mx/calculadora/",
+  "version": "0.5.3",
+  "dateModified": "2026-08-12",
+  "programmingLanguage": [
+    "TypeScript",
+    "Python",
+    "R"
+  ],
+  "keywords": [
+    "peptide calculations",
+    "reconstitution",
+    "concentration",
+    "dilution",
+    "molarity",
+    "research software",
+    "reproducibility"
+  ],
+  "license": "https://spdx.org/licenses/MIT.html",
+  "author": {
+    "@type": "Organization",
+    "name": "Péptido México",
+    "url": "https://peptidomexico.com.mx/"
+  },
+  "maintainer": {
+    "@type": "Organization",
+    "name": "Péptido México Open Science",
+    "url": "https://github.com/PeptidoMexico"
+  },
+  "citation": "https://github.com/PeptidoMexico/peptidomexico-open-science/blob/main/CITATION.cff",
+  "identifier": [
+    "https://doi.org/10.5281/zenodo.21895679",
+    "https://doi.org/10.5281/zenodo.21895595"
+  ],
+  "releaseNotes": "https://github.com/PeptidoMexico/peptidomexico-open-science/releases/tag/v0.5.3"
+}
