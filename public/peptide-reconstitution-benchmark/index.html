@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="An inspectable, synthetic benchmark for peptide reconstitution volume and unit conversion calculations.">
+    <title>Synthetic peptide reconstitution benchmark | Peptido México Open Science</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1d2630;
+        --muted: #5b6873;
+        --line: #d7dee5;
+        --paper: #ffffff;
+        --wash: #f3f6f8;
+        --accent: #0b6572;
+        --accent-dark: #084750;
+        --code: #eef5f6;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--wash);
+        font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a { color: var(--accent-dark); }
+      a:hover { color: var(--accent); }
+
+      .page {
+        width: min(980px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      header, section, footer {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: clamp(20px, 4vw, 36px);
+        margin-bottom: 18px;
+      }
+
+      header { border-top: 5px solid var(--accent); }
+
+      h1, h2, h3 { line-height: 1.2; margin: 0 0 14px; }
+      h1 { font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -0.03em; }
+      h2 { font-size: clamp(1.35rem, 3vw, 1.8rem); }
+      h3 { font-size: 1.1rem; }
+      p { margin: 0 0 14px; }
+      .kicker { color: var(--accent-dark); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.78rem; }
+      .lede { color: var(--muted); font-size: 1.12rem; max-width: 760px; }
+      .note { border-left: 4px solid var(--accent); padding: 12px 16px; background: #f3fafb; }
+
+      .links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 20px; }
+      .links a { font-weight: 650; }
+
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+      .card { border: 1px solid var(--line); border-radius: 10px; padding: 16px; background: #fbfcfd; }
+      .card p:last-child { margin-bottom: 0; }
+
+      code, .formula { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .formula { display: block; padding: 14px 16px; border-radius: 8px; background: var(--code); color: #123d43; overflow-x: auto; margin: 16px 0; }
+
+      label { display: block; font-weight: 650; }
+      input, select, button { font: inherit; }
+      input, select { width: 100%; margin-top: 5px; border: 1px solid #aebbc4; border-radius: 7px; padding: 9px 10px; background: white; color: var(--ink); }
+      button { border: 0; border-radius: 7px; padding: 10px 15px; color: white; background: var(--accent-dark); cursor: pointer; font-weight: 700; }
+      button:hover { background: var(--accent); }
+      .controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin: 18px 0; }
+      .result { border-radius: 9px; padding: 16px; background: #102f35; color: #f4ffff; }
+      .result strong { font-size: 1.7rem; display: block; margin-bottom: 3px; }
+      .result code { color: #d8ffff; }
+
+      .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 9px; }
+      table { border-collapse: collapse; width: 100%; min-width: 680px; }
+      th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+      th { background: #edf3f5; font-size: 0.86rem; }
+      tbody tr:last-child td { border-bottom: 0; }
+      td.num { font-variant-numeric: tabular-nums; }
+
+      footer { color: var(--muted); font-size: 0.92rem; }
+      footer p:last-child { margin-bottom: 0; }
+      @media (max-width: 560px) {
+        .page { width: min(100% - 20px, 980px); padding-top: 10px; }
+        header, section, footer { border-radius: 10px; padding: 20px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <p class="kicker">Peptido México Open Science</p>
+        <h1>Synthetic peptide reconstitution benchmark</h1>
+        <p class="lede">A small, inspectable set of deterministic cases for checking mass, concentration, unit conversion and target volume calculations. Every row can be read without an instrument, a sample or a hidden dependency.</p>
+        <nav class="links" aria-label="Project links">
+          <a href="https://peptidomexico.com.mx/open-science/" target="_blank" rel="noreferrer noopener">Open Science program</a>
+          <a href="https://peptidomexico.com.mx/calculadora/" target="_blank" rel="noreferrer noopener">Guided calculator</a>
+          <a href="https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/benchmarks/peptide-calculations-synthetic" target="_blank" rel="noreferrer noopener">Source dataset</a>
+          <a href="https://doi.org/10.6084/m9.figshare.33213873.v1" target="_blank" rel="noreferrer noopener">Dataset record</a>
+        </nav>
+      </header>
+
+      <section>
+        <h2>What this fixture checks</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Mass concentration</h3>
+            <p>Rows cover mg and µg inputs with targets expressed as mg/mL, µg/mL or µg/µL.</p>
+          </article>
+          <article class="card">
+            <h3>Molar concentration</h3>
+            <p>Three rows require an explicit molecular mass before a target in mM can be converted to mg/mL.</p>
+          </article>
+          <article class="card">
+            <h3>Regression checks</h3>
+            <p>The expected volume is fixed for each row, so a validator can catch unit mistakes without guessing.</p>
+          </article>
+        </div>
+        <span class="formula">volume (mL) = mass (mg) ÷ concentration (mg/mL)</span>
+        <p class="note"><strong>Scope:</strong> These are synthetic calculation cases. They do not describe a vial, batch, purity result, identity test, clinical dose or administration protocol.</p>
+      </section>
+
+      <section>
+        <h2>Try a calculation</h2>
+        <p>Use the same arithmetic contract as the benchmark. For an mM target, enter the molecular mass in daltons.</p>
+        <div class="controls">
+          <label>Mass (mg)
+            <input id="mass" type="number" min="0.000001" step="any" value="10">
+          </label>
+          <label>Target concentration
+            <input id="target" type="number" min="0.000001" step="any" value="5">
+          </label>
+          <label>Target unit
+            <select id="unit">
+              <option>mg/mL</option>
+              <option>µg/mL</option>
+              <option>µg/µL</option>
+              <option>mM</option>
+            </select>
+          </label>
+          <label>Molecular mass (Da, for mM)
+            <input id="mw" type="number" min="0.000001" step="any" value="4000">
+          </label>
+        </div>
+        <button id="calculate" type="button">Calculate volume</button>
+        <div class="result" aria-live="polite" style="margin-top: 16px">
+          <strong id="volume">2.000 mL</strong>
+          <span id="equation">10 mg ÷ 5 mg/mL</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Reference cases</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Case</th><th>Mass</th><th>Target</th><th>Molecular mass</th><th>Expected volume</th></tr>
+            </thead>
+            <tbody id="cases"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>Reproduce it locally</h2>
+        <p>The repository contains the CSV, schema, dataset card and validator. From a clean checkout:</p>
+        <span class="formula">npm ci<br>npm run benchmark:reconstitution</span>
+        <p>The validator checks every expected volume and prints the SHA-256 of the input file. The benchmark is deliberately small so a reviewer can inspect each row.</p>
+        <p>For the source files and license, see the <a href="https://github.com/PeptidoMexico/peptidomexico-open-science/tree/main/benchmarks/peptide-calculations-synthetic" target="_blank" rel="noreferrer noopener">benchmark directory on GitHub</a>.</p>
+      </section>
+
+      <footer>
+        <p>Maintained by <a href="https://peptidomexico.com.mx/open-science/" target="_blank" rel="noreferrer noopener">Peptido México Open Science</a>. The benchmark is released under CC BY 4.0 as a synthetic software fixture.</p>
+        <p>Use it to inspect arithmetic and software behavior. It is not a substitute for analytical testing, laboratory protocol review or medical advice.</p>
+      </footer>
+    </main>
+
+    <script>
+      const cases = [
+        ["recon-001", 10, "mg", 5, "mg/mL", "", 2],
+        ["recon-002", 5, "mg", 2.5, "mg/mL", "", 2],
+        ["recon-003", 500, "µg", 2, "µg/µL", "", 0.25],
+        ["recon-004", 1, "mg", 100, "µg/mL", "", 10],
+        ["recon-005", 20, "mg", 8, "mg/mL", "", 2.5],
+        ["recon-006", 2500, "µg", 5, "µg/µL", "", 0.5],
+        ["recon-007", 8, "mg", 1, "mM", 4000, 2],
+        ["recon-008", 12, "mg", 2, "mM", 3000, 2],
+        ["recon-009", 0.75, "mg", 0.5, "mg/mL", "", 1.5],
+        ["recon-010", 1250, "µg", 250, "µg/mL", "", 5],
+        ["recon-011", 3, "mg", 1500, "µg/mL", "", 2],
+        ["recon-012", 6, "mg", 0.75, "mM", 8000, 1]
+      ];
+
+      const format = (value) => Number(value).toLocaleString("en-US", { maximumFractionDigits: 6 });
+      const casesBody = document.querySelector("#cases");
+      casesBody.innerHTML = cases.map(([id, mass, massUnit, target, targetUnit, mw, volume]) => `
+        <tr>
+          <td><code>${id}</code></td>
+          <td class="num">${format(mass)} ${massUnit}</td>
+          <td class="num">${format(target)} ${targetUnit}</td>
+          <td class="num">${mw ? `${format(mw)} Da` : "Not required"}</td>
+          <td class="num"><strong>${format(volume)} mL</strong></td>
+        </tr>`).join("");
+
+      function calculate() {
+        const mass = Number(document.querySelector("#mass").value);
+        const target = Number(document.querySelector("#target").value);
+        const unit = document.querySelector("#unit").value;
+        const mw = Number(document.querySelector("#mw").value);
+        let concentrationMgMl = target;
+        if (unit === "µg/mL") concentrationMgMl = target / 1000;
+        if (unit === "mM") concentrationMgMl = (target * mw) / 1000;
+        const volume = mass > 0 && concentrationMgMl > 0 ? mass / concentrationMgMl : NaN;
+        document.querySelector("#volume").textContent = Number.isFinite(volume) ? `${volume.toFixed(3)} mL` : "Enter positive values";
+        document.querySelector("#equation").textContent = unit === "mM"
+          ? `${format(mass)} mg ÷ (${format(target)} mM × ${format(mw)} Da ÷ 1000)`
+          : `${format(mass)} mg ÷ ${format(target)} ${unit}`;
+      }
+
+      document.querySelector("#calculate").addEventListener("click", calculate);
+      ["mass", "target", "unit", "mw"].forEach((id) => document.querySelector(`#${id}`).addEventListener("input", calculate));
+    </script>
+  </body>
+</html>
